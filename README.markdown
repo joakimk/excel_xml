@@ -12,10 +12,14 @@ Dependencies
 
 Usage
 =====
-Getting excel_xml and generating a simple excel document:
+A simple document:
+    ExcelXML.new("People", [ [ "Name:", "Age:" ], [ "Jake", 42 ], [ "Kate", 33 ] ]).to_sheet
+
+Getting excel_xml and generating a document:
     git clone git://github.com/joakimk/excel_xml.git
     cd excel_xml
     ruby -e 'require "rubygems"; require "excel_xml"; puts ExcelXML.new("People", [ [ "Name:", "Age:" ], [ "Jake", 42 ], [ "Kate", 33 ] ]).to_sheet' > doc.xml
+    open doc.xml -a NeoOffice.app
 
 Using multiple sheets in the same document:
     ExcelXML.build { |e|
