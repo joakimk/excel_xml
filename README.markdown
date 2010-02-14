@@ -11,7 +11,7 @@ Dependencies
 
 Compability
 =====
-Has been tested with NeoOffice and MS Office 2003.
+Has been tested with NeoOffice 3.0.1 and MS Office 2003.
 
 Usage
 =====
