@@ -73,8 +73,6 @@ class ExcelXML
     end
   end
 
-  # Data is given as a nested array: [ ["Name:", "Age:"], [ "Jake", 42 ], [ "Kate", 33 ] ].
-  # Anything that is not Numeric or Date is transformed into a string with to_s.
   def initialize(name="Sheet", data=[])
     @name = name
     @data = data
