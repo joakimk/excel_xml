@@ -18,7 +18,7 @@ Trying out a simple sheet in irb:
       require 'excel_xml'
       puts ExcelXML.new("People", [ [ "Name:", "Age:" ], [ "Jake", 42 ], [ "Kate", 33 ] ]).to_sheet; nil
 
-Doing multiple sheets:
+Using multiple sheets in the same document:
     ExcelXML.build { |e|
       e.worksheet "People" do
         e << [ "Name:", "Age:" ]
