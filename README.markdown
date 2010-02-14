@@ -3,8 +3,7 @@ Library for creating Excel XML documents using Ruby.
 About
 =====
 
-A simple Excel XML generating library originally created by Henrik Nyh. Extracted from
-the project I'm currently working on.
+A simple Excel XML generating library extracted from the project I'm currently working on. Originally created by Henrik Nyh.
 
 Dependencies
 =====
