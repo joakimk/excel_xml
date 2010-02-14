@@ -3,7 +3,7 @@ Library for creating Excel XML documents using Ruby.
 About
 =====
 
-A simple Excel XML generating library extracted from the project I'm currently working on. Originally created by Henrik Nyh.
+A simple Excel XML generating library extracted from the project I'm currently working on. Originally created by Henrik Nyh / Auktionskompaniet.com.
 
 Dependencies
 =====
@@ -58,7 +58,5 @@ Authors
  - [Andreas Alin](http://github.com/aalin)
  - [Henrik Nyh](http://github.com/henrik)
 
-[Joakim Kolsjö](http://www.rubyblocks.se)
+Created by [Joakim Kolsjö](http://www.rubyblocks.se) for Auktionskompaniet.com.
 joakim.kolsjo<$at$>gmail.com
-
-Hereby placed under public domain, do what you want, just do not hold me accountable...
