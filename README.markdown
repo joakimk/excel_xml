@@ -9,6 +9,10 @@ Dependencies
 =====
     sudo gem install builder
 
+Compability
+=====
+Has been tested with NeoOffice and MS Office 2003.
+
 Usage
 =====
 A simple document:
