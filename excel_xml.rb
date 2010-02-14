@@ -1,5 +1,5 @@
 require 'bigdecimal'
-require "builder"
+require 'builder'
 
 class Numeric
   # To simplify usage outside of rails

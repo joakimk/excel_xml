@@ -8,15 +8,18 @@ the project I'm currently working on.
 
 Dependencies
 =====
-    sudo gem install nokogiri
+    sudo gem install builder
 
 Usage
 =====
-    -- Simple sheet --
-    puts ExcelXML.new("People", [ [ "Name:", "Age:" ], [ "Jake", 42 ], [ "Kate", 33 ] ]).to_sheet
-    
-    -- Multiple sheets --
-    puts ExcelXML.build { |e|
+Trying out a simple sheet in irb:
+    # irb
+      require 'rubygems'
+      require 'excel_xml'
+      puts ExcelXML.new("People", [ [ "Name:", "Age:" ], [ "Jake", 42 ], [ "Kate", 33 ] ]).to_sheet; nil
+
+Doing multiple sheets:
+    ExcelXML.build { |e|
       e.worksheet "People" do
         e << [ "Name:", "Age:" ]
         e << [ "Jake", 42 ]
@@ -30,11 +33,11 @@ Usage
       end
     }
     
-    -- Using currency formatting --
-    puts ExcelXML.new("Expenses", [ [ "Store:", "Amount:" ], [ "7-11", (9.50).to_d ], [ "IKEA", (350.25).to_d ] ]).to_sheet
+Using currency formatting:
+    ExcelXML.new("Expenses", [ [ "Store:", "Amount:" ], [ "7-11", (9.50).to_d ], [ "IKEA", (350.25).to_d ] ]).to_sheet
     
-    -- Specifying column widths --
-    puts ExcelXML.build { |e|
+Specifying column widths:
+    ExcelXML.build { |e|
       e.worksheet "People", :column_widths => [ 200, 30 ] do
         e << [ "Name:", "Age:" ]
         e << [ "Jake", 42 ]
@@ -44,7 +47,7 @@ Usage
 
 Running the specs
 =====
-    sudo gem install rspec
+    sudo gem install rspec nokogiri
     rake
 
 Authors
