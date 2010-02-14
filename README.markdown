@@ -12,11 +12,10 @@ Dependencies
 
 Usage
 =====
-Trying out a simple sheet in irb:
-    # irb
-      require 'rubygems'
-      require 'excel_xml'
-      puts ExcelXML.new("People", [ [ "Name:", "Age:" ], [ "Jake", 42 ], [ "Kate", 33 ] ]).to_sheet; nil
+Getting excel_xml and generating a simple excel document:
+    git clone git://github.com/joakimk/excel_xml.git
+    cd excel_xml
+    ruby -e 'require "rubygems"; require "excel_xml"; puts ExcelXML.new("People", [ [ "Name:", "Age:" ], [ "Jake", 42 ], [ "Kate", 33 ] ]).to_sheet' > doc.xml
 
 Using multiple sheets in the same document:
     ExcelXML.build { |e|
