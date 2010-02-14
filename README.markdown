@@ -19,6 +19,9 @@ Getting excel_xml and generating a document:
     cd excel_xml
     ruby -rubygems -rexcel_xml -e 'puts ExcelXML.new("People", [ [ "Name:", "Age:" ], [ "Jake", 42 ], [ "Kate", 33 ] ]).to_sheet' > doc.xml
     open doc.xml -a NeoOffice.app
+    
+Installing as a rails plugin:
+    script/plugin install git://github.com/joakimk/excel_xml.git
 
 Using multiple sheets in the same document:
     ExcelXML.build { |e|
