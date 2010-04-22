@@ -80,8 +80,8 @@ class ExcelXML
     @data = data
   end
 
-  def self.build(&block)
-    ExcelXMLBuilder.new.build(&block)
+  def self.build(target = "", &block)
+    ExcelXMLBuilder.new.build(target, &block)
   end
 
   def to_sheet

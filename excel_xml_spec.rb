@@ -89,10 +89,10 @@ describe ExcelXML do
   end
 end
 
-describe ExcelXML::ExcelXMLBuilder do
+describe ExcelXML do
   it 'should write XML to an IO-object' do
     io = StringIO.new
-    ExcelXML::ExcelXMLBuilder.new.build(io) do |excel|
+    ExcelXML.build(io) do |excel|
       excel.worksheet "The Worksheet" do
         excel << [ "foo", "bar" ]
       end
