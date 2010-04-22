@@ -1,5 +1,6 @@
 require 'bigdecimal'
 require 'builder'
+require 'cgi'
 
 class Numeric
   # To simplify usage outside of rails
@@ -14,10 +15,11 @@ class ExcelXML
 
   class ExcelXMLBuilder
     def build
-      @xml = Builder::XmlMarkup.new(:indent=>2)      
+      @xml = Builder::XmlMarkup.new(:indent=>2)
 
+      # The default implementation turns non-ASCII characters into entities, which does not work for Excel XML.
       def @xml._escape(text)
-        text.gsub(/</, '&lt;').gsub(/>/, '&gt;')
+        CGI.escapeHTML(text)
       end
        
       @xml.instruct! :xml, :version=>"1.0", :encoding=>"UTF-8"
