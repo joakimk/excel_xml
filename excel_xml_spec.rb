@@ -88,3 +88,15 @@ describe ExcelXML do
     columns[1]['Width'].should == '100'
   end
 end
+
+describe ExcelXML::ExcelXMLBuilder do
+  it 'should write XML to an IO-object' do
+    io = StringIO.new
+    ExcelXML::ExcelXMLBuilder.new.build(io) do |excel|
+      excel.worksheet "The Worksheet" do
+        excel << [ "foo", "bar" ]
+      end
+    end
+    io.string.should match(/^<Workbook/)
+  end
+end
